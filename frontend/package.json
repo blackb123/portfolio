@@ -1,13 +1,16 @@
 {
   "name": "frontend",
   "private": true,
+  "homepage":"https://blackb123.github.io/portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy":"npm ru build",
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "boostrap": "^2.0.0",
