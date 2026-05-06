@@ -74,7 +74,7 @@ export default function Roadmap() {
       ref={containerRef}
       id="roadmap"
       className="relative bg-[#0a0a0a] border-t border-white/5 overflow-hidden"
-      style={{ padding: '20px 0' }}
+      style={{ padding: '30px 0' }}
     >
       {/* Background gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-neutral-800 to-transparent" />

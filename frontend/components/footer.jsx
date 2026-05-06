@@ -54,7 +54,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#050505] border-t border-white/5" style={{ padding: '20px 0' }}>
+    <footer className="bg-[#050505] border-t border-white/5" style={{ padding: '30px 0' }}>
 
       {/* ================= CTA ================= */}
       <section className="px-8 py-32 md:py-48 border-t border-white/10" style={{ padding: '50px 50px' }}>

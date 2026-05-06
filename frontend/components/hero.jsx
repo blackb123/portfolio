@@ -86,7 +86,6 @@ export default function Hero() {
         </motion.div>
 
         {/* Social Icons (Mobile) – now with inline SVGs */}
-        {isMobile && (
           <motion.div
             className="absolute bottom-8 left-6 z-50"
             initial={{ opacity: 0, x: -10 }}
@@ -143,7 +142,6 @@ export default function Hero() {
               </a>
             </div>
           </motion.div>
-        )}
       </div>
 
       {/* ========== 2. INTRO SECTION (Dark Background) ========== */}

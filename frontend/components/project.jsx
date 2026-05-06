@@ -163,7 +163,7 @@ export default function Projects() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       className="bg-[#0a0a0a] border-t border-white/5"
-      style={{ padding: '20px 0' }}
+      style={{ padding: '30px 0' }}
     >
       {/* Header Section */}
       <div className="px-8 py-32 md:py-48">

@@ -30,7 +30,7 @@ export default function About() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       className="bg-[#0a0a0a] border-t border-white/5"
-      style={{ padding: '20px 0' }}
+      style={{ padding: '30px 0' }}
     >
       {/* Main About Section */}
       <div className="px-8 py-32 md:py-48 min-h-[80vh] flex items-center">
@@ -143,7 +143,7 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        style={{ padding: '20px 0' }}
+        style={{ padding: '30px 0' }}
         className="px-8 py-24 md:py-32 border-t border-white/5 mt-24 md:mt-32"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24">

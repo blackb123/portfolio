@@ -319,18 +319,28 @@
         "year": "2024",
         "title": "Projets & Collaboration",
         "description": "Travail sur plusieurs projets utilisant Git/GitHub. Construction de projets React + PHP avec des APIs personnalisées, acquérant une solide expérience full-stack."
+      },
+      {
+        "year": "2025",
+        "title": "Deuxième Année Université",
+        "description": "Études avancées en ingénierie logicielle. Construction actuelle de solutions web professionnelles et expansion de l'expertise en architectures frontend modernes."
       }
     ],
     "experiences": [
       {
         "year": "2023",
-        "title": "Stage – Chiala",
-        "description": "Excel et Microsoft Office pour la documentation. Maintenance informatique, dépannage et développement de compétences pratiques en support IT."
+        "title": "Stage Professionnel – Chiala IT",
+        "description": "Fourniture de support informatique et maintenance d'infrastructure en environnement professionnel. Gestion des systèmes de documentation, diagnostics matériels et résolution de problèmes techniques pour la continuité opérationnelle."
       },
       {
         "year": "2024",
         "title": "Stage – PEFSCOM SARL",
         "description": "Développement web full-stack, applications desktop, gestion de bases de données et réseaux. Renforcement de la polyvalence technique dans un cadre professionnel."
+      },
+      {
+        "year": "2025",
+        "title": "Développeur Frontend – MNLV Media",
+        "description": "Construction d'une Solution Web Radio avec capacités de streaming en direct, gestion de playlists et systèmes de diffusion audio en temps réel pour médias de broadcast."
       }
     ]
   },

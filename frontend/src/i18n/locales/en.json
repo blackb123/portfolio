@@ -319,18 +319,28 @@
         "year": "2024",
         "title": "Projects & Collaboration",
         "description": "Worked on multiple projects using Git/GitHub. Built React + PHP projects with custom APIs, gaining strong full-stack experience."
+      },
+      {
+        "year": "2025",
+        "title": "Year Two University",
+        "description": "Advanced studies in software engineering. Currently building professional web solutions and expanding expertise in modern frontend architectures."
       }
     ],
     "experiences": [
       {
         "year": "2023",
-        "title": "Internship – Chiala",
-        "description": "Excel and Microsoft Office for documentation. Computer maintenance, troubleshooting, and building practical IT support skills."
+        "title": "Professional Internship – Chiala IT",
+        "description": "Delivered IT support and infrastructure maintenance in a professional environment. Managed documentation systems, performed hardware diagnostics, and resolved technical issues for operational continuity."
       },
       {
         "year": "2024",
         "title": "Internship – PEFSCOM SARL",
         "description": "Full-stack web development, desktop apps, database management, and networking. Strengthened technical versatility in a professional setting."
+      },
+      {
+        "year": "2025",
+        "title": "Frontend Developer – MNLV Media",
+        "description": "Building a Web Radio Solution with live streaming capabilities, playlist management, and real-time audio delivery systems for broadcast media."
       }
     ]
   },

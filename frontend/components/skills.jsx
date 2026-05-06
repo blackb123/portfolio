@@ -28,7 +28,7 @@ export default function ElegantSkills() {
   const skillCategories = Array.isArray(categoriesData) ? categoriesData : skillCategoriesData;
 
   return (
-    <section className="bg-black text-white py-64 px-12 md:px-24" style={{ padding: '20px 0' }}>
+    <section className="bg-black text-white py-64 px-12 md:px-24" style={{ padding: '30px 0' }}>
       <div className="max-w-5xl mx-auto">
         
         {/* Minimal Header */}
