@@ -1,115 +1,200 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { useTranslation } from 'react-i18next';
+
+
+function TreeNode({ data, index }) {
+  const isLeft = index % 2 === 0; // Alternate: even indexes on left, odd on right
+  
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
+      viewport={{ once: true, margin: "-50px" }}
+      className={`relative flex items-center gap-8 ${isLeft ? "flex-row" : "flex-row-reverse"} w-full`}
+    >
+      {/* Content Card */}
+      <div className={`flex-1 ${isLeft ? "text-right pr-8" : "text-left pl-8"}`}>
+        <div className="group inline-block">
+          <span className="text-orange-500 text-xs font-bold uppercase tracking-[0.2em]">
+            {data.year}
+          </span>
+          <h3 className="text-white text-xl md:text-2xl font-medium tracking-tight mt-1 group-hover:text-orange-500 transition-colors">
+            {data.title}
+          </h3>
+          <p className="text-neutral-400 text-sm md:text-base font-light leading-relaxed mt-3 max-w-md">
+            {data.description}
+          </p>
+        </div>
+      </div>
+
+      {/* Center Node */}
+      <div className="relative flex-shrink-0 w-4 h-4">
+        {/* Outer ring */}
+        <div className="absolute inset-0 rounded-full border border-orange-500/30 scale-150" />
+        {/* Inner dot */}
+        <motion.div 
+          className="w-full h-full rounded-full bg-orange-500"
+          whileInView={{ scale: [0, 1.2, 1] }}
+          transition={{ duration: 0.4, delay: index * 0.15 + 0.2 }}
+          viewport={{ once: true }}
+        />
+        {/* Pulse effect */}
+        <motion.div
+          className="absolute inset-0 rounded-full bg-orange-500"
+          animate={{ scale: [1, 2, 2], opacity: [0.5, 0, 0] }}
+          transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+        />
+      </div>
+
+      {/* Spacer for opposite side */}
+      <div className="flex-1" />
+    </motion.div>
+  );
+}
 
 export default function Roadmap() {
-  return (
-    <motion.section
-      className="roadmap"
-      id="roadmap"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-      {/* First card - comes from LEFT */}
-      <motion.div
-        className="roadmap-card"
-        initial={{ opacity: 0, x: -200 }}   
-        whileInView={{ opacity: 1, x: 0 }} 
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <h2>Road Map</h2>
-        <hr />
-        <div className="roadmap-border">
-          <div className="road-section">
-            <h3>1. 📚 GCE ordinary level</h3>
-            <p>
-              I began my coding journey during my GCE Ordinary Level, where I
-              discovered Python through game development with Pygame. Building
-              small games taught me how programming works under the hood and gave
-              me an early understanding of functions and logic. It was the first
-              step that sparked my passion for tech.
-            </p>
-          </div>
-          <div className="road-section">
-            <h3>2. 🎮 Lower Sixth</h3>
-            <p>
-              In Lower Sixth, I explored C# and Unity, creating simple but
-              exciting games that strengthened my logic skills and creativity.
-              Along the way, I also learned the basics of SQL and gained more
-              awareness of the tech ecosystem. This stage helped me see how coding
-              could shape real-world solutions.
-            </p>
-          </div>
-          <div className="road-section">
-            <h3>3. 🌐 Upper Sixth</h3>
-            <p>
-              I deepened my learning in C# and Unity, building more structured
-              projects. Alongside, I improved my SQL skills, which gave me
-              confidence in managing data-driven applications and understanding
-              system design better.
-            </p>
-          </div>
-          <div className="road-section">
-            <h3>4. 🏫 First Year University</h3>
-            <p>
-              In my first year of university, I focused on the backend side of
-              development. I learned PHP and MySQL, created APIs to connect to
-              databases, and even explored the .NET ecosystem to build desktop apps
-              with WinForms, SQLite, and SQL Express. Most of my backend projects
-              were built with PHP, where I gained hands-on experience in managing
-              databases and server logic.
-            </p>
-          </div>
-          <div className="road-section">
-            <h3>5. 🔧 Projects & Collaboration</h3>
-            <p>
-              Along the way, I worked on multiple projects using Git and GitHub,
-              managing version control and collaborating effectively. I also built
-              React + PHP projects with custom APIs (coded without frameworks),
-              which gave me strong full-stack experience and confidence as a
-              developer.
-            </p>
-          </div>
-        </div>
-      </motion.div>
+  const { t } = useTranslation();
+  const containerRef = useRef(null);
 
-      {/* Second card - comes from RIGHT */}
-      <motion.div
-        className="roadmap-card"
-        initial={{ opacity: 0, x: 200 }}  
-        whileInView={{ opacity: 1, x: 0 }} 
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <h2>Experience</h2>
-        <hr />
-        <div className="roadmap-border">
-          <div className="road-section">
-            <h3>I. 💼 Internship – Chiala, Cameroon</h3>
-            <p>
-              During my internship at Chiala, Cameroon, I was responsible for tasks
-              involving Excel and Microsoft Office for documentation and reporting.
-              I also worked on computer maintenance, ensuring systems were running
-              smoothly and troubleshooting technical issues. This experience helped
-              me build practical IT support skills and understand the importance of
-              reliability in tech environments.
-            </p>
-          </div>
-          <div className="road-section">
-            <h3>II. 💻 Internship – PEFSCOM SARL</h3>
-            <p>
-              At PEFSCOM SARL, I participated in multiple projects covering
-              full-stack web development, desktop application development, database
-              management, and basic networking. I gained hands-on experience in
-              both frontend and backend workflows, learning how to integrate
-              technologies effectively while collaborating in a professional
-              setting. This internship strengthened my technical versatility and
-              teamwork skills.
-            </p>
+  const milestonesData = t('roadmap.milestones', { returnObjects: true });
+  const experiencesData = t('roadmap.experiences', { returnObjects: true });
+  const journeyMilestones = Array.isArray(milestonesData) ? milestonesData : [];
+  const experiences = Array.isArray(experiencesData) ? experiencesData : [];
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const treeHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  return (
+    <section
+      ref={containerRef}
+      id="roadmap"
+      className="relative bg-[#0a0a0a] border-t border-white/5 overflow-hidden"
+      style={{ padding: '20px 0' }}
+    >
+      {/* Background gradient */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-neutral-800 to-transparent" />
+
+      {/* Header */}
+      <div className="px-8 py-32 md:py-48">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-orange-500 text-xs font-bold uppercase tracking-[0.3em]"
+          >
+            {t('roadmap.label')}
+          </motion.span>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-7xl font-medium tracking-tighter text-white mt-6"
+          >
+            {t('roadmap.title')}{" "}<span className="text-orange-600 italic">{t('roadmap.titleHighlight')}</span>{" "}{t('roadmap.subtitle')}
+          </motion.h2>
+          
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="w-24 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto mt-8"
+          />
+        </div>
+      </div>
+
+      {/* Tree Timeline - Education */}
+      <div className="relative px-8 pb-32">
+        <div className="max-w-4xl mx-auto">
+          {/* Section Label */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <span className="text-neutral-600 text-xs uppercase tracking-[0.2em]">{t('roadmap.education')}</span>
+          </motion.div>
+
+          {/* Tree with animated trunk */}
+          <div className="relative">
+            {/* Animated vertical line */}
+            <motion.div 
+              style={{ height: treeHeight }}
+              className="absolute left-1/2 -translate-x-1/2 top-0 w-px bg-gradient-to-b from-orange-500 via-orange-500/50 to-transparent z-10"
+            />
+            
+            {/* Static line base */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 w-px h-full bg-neutral-800" />
+
+            {/* Nodes */}
+            <div className="relative space-y-24 md:space-y-32">
+              {journeyMilestones.map((milestone, index) => (
+                <TreeNode key={index} data={milestone} index={index} />
+              ))}
+            </div>
           </div>
         </div>
-      </motion.div>
-    </motion.section>
+      </div>
+
+      {/* Experience Branch */}
+      <div className="relative px-8 py-32 border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          {/* Section Label */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <span className="text-neutral-600 text-xs uppercase tracking-[0.2em]">{t('roadmap.experience')}</span>
+          </motion.div>
+
+          {/* Branch line */}
+          <div className="relative">
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 w-px h-full bg-neutral-800" />
+            <motion.div 
+              style={{ height: treeHeight }}
+              className="absolute left-1/2 -translate-x-1/2 top-0 w-px bg-gradient-to-b from-orange-500 via-orange-500/50 to-transparent z-10"
+            />
+
+            {/* Experience Nodes */}
+            <div className="relative space-y-24 md:space-y-32">
+              {experiences.map((exp, index) => (
+                <TreeNode key={index} data={exp} index={index + journeyMilestones.length} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom decoration */}
+      <div className="px-8 py-24 border-t border-white/5">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto text-center"
+        >
+          <div className="inline-flex items-center gap-4">
+            <div className="h-px w-12 bg-neutral-800" />
+            <span className="text-neutral-500 text-sm">{t('roadmap.continued')}</span>
+            <div className="h-px w-12 bg-neutral-800" />
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }

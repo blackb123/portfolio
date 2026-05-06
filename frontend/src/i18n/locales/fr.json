@@ -1,0 +1,370 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "work": "Projets",
+    "journey": "Parcours",
+    "solutions": "Solutions",
+    "process": "Processus",
+    "services": "Services",
+    "impact": "Impact"
+  },
+  "hero": {
+    "scroll": "Défiler",
+    "welcome": "BIENVENUE"
+  },
+  "about": {
+    "label": "À propos",
+    "number": "02",
+    "title": "Un",
+    "titleHighlight": "développeur",
+    "titleEnd": "passionné avec une forte curiosité pour la",
+    "titleEndHighlight": "technologie, le design et la résolution de problèmes.",
+    "positioning": "Développeur fullstack spécialisé dans la création de systèmes évolutifs et d'outils d'automatisation.",
+    "description": "J'aime créer des applications propres, réactives et conviviales qui équilibrent fonctionnalité et design. Chaque projet est une opportunité d'apprendre, d'expérimenter et d'affiner mes compétences—from smooth navigation to accessible layouts.",
+    "positioning2": "Je ne me contente pas de créer des interfaces, je conçois des systèmes complets qui résolvent de véritables problèmes opérationnels.",
+    "details": {
+      "label": "Détails",
+      "email": "Email",
+      "location": "Localisation",
+      "experience": "Expérience",
+      "focus": "Spécialisation",
+      "emailValue": "brad@example.com",
+      "locationValue": "Douala, Cameroun",
+      "experienceValue": "2+ ans",
+      "focusValue": "Développement Fullstack"
+    },
+    "quote": "À l'avenir, je vise à continuer d'élargir mes connaissances, à collaborer avec d'autres et à créer des solutions numériques impactantes qui connectent les gens à la technologie."
+  },
+  "solutions": {
+    "label": "Solutions",
+    "number": "03",
+    "title": "Ce que je",
+    "titleHighlight": "Construis",
+    "items": [
+      {
+        "title": "Applications Web",
+        "description": "Tableaux de bord personnalisés, panneaux d'administration et plateformes SaaS",
+        "items": ["Tableaux de bord personnalisés", "Panneaux d'administration", "Plateformes SaaS"]
+      },
+      {
+        "title": "Automatisation d'Entreprise",
+        "description": "Systèmes d'automatisation des tâches et intégration de workflows",
+        "items": ["Automatisation des tâches", "Automatisation des workflows (n8n, APIs)", "Intégrations IA"]
+      },
+      {
+        "title": "Systèmes en Temps Réel",
+        "description": "Tableaux de bord en direct et systèmes de surveillance",
+        "items": ["Systèmes de files d'attente (comme TicketFlow)", "Tableaux de bord en direct", "Systèmes de surveillance"]
+      },
+      {
+        "title": "Outils Propulsés par l'IA",
+        "description": "Chatbots et systèmes de génération de contenu",
+        "items": ["Chatbots", "Génération de contenu", "Assistants intelligents"]
+      },
+      {
+        "title": "Applications Desktop & Hybrides",
+        "description": "Logiciels et outils internes pour entreprises",
+        "items": ["Outils WinForms", "Logiciels internes d'entreprise"]
+      }
+    ]
+  },
+  "process": {
+    "label": "Processus",
+    "number": "04",
+    "title": "Comment je",
+    "titleHighlight": "Travaille",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Comprendre votre problème",
+        "description": "Plongée profonde dans vos défis commerciaux et vos objectifs"
+      },
+      {
+        "number": "02",
+        "title": "Concevoir la solution",
+        "description": "Créer une feuille de route claire et une architecture technique"
+      },
+      {
+        "number": "03",
+        "title": "Construire rapidement et proprement",
+        "description": "Développer avec les meilleures pratiques modernes et du code propre"
+      },
+      {
+        "number": "04",
+        "title": "Tester et optimiser",
+        "description": "Assurer la qualité, les performances et la fiabilité"
+      },
+      {
+        "number": "05",
+        "title": "Déployer et supporter",
+        "description": "Lancer avec succès et fournir un support continu"
+      }
+    ]
+  },
+  "services": {
+    "label": "Services",
+    "number": "05",
+    "title": "Services que j'",
+    "titleHighlight": "Offre",
+    "items": [
+      {
+        "title": "Développement Web Fullstack",
+        "description": "Applications web complètes du concept au déploiement, adaptées aux besoins de votre entreprise"
+      },
+      {
+        "title": "Systèmes d'Automatisation",
+        "description": "Rationaliser les tâches répétitives et les workflows pour gagner du temps et réduire les erreurs"
+      },
+      {
+        "title": "Développement et Intégration d'API",
+        "description": "Connectez vos systèmes de manière transparente avec des API robustes et des intégrations tierces"
+      },
+      {
+        "title": "Design UI/UX",
+        "description": "Créer des interfaces intuitives que les utilisateurs adorent et qui stimulent l'engagement"
+      },
+      {
+        "title": "Architecture de Systèmes",
+        "description": "Concevoir des systèmes évolutifs et maintenables qui grandissent avec votre entreprise"
+      },
+      {
+        "title": "Conseil Technique",
+        "description": "Conseils d'experts sur les décisions technologiques et les stratégies de transformation numérique"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Projets",
+    "number": "03",
+    "title": "Projets",
+    "titleHighlight": "Sélectionnés",
+    "subtitle": "qui démontrent",
+    "subtitleHighlight": "la résolution de problèmes réels.",
+    "description": "Chaque projet représente un défi unique relevé avec du code propre, un design réfléchi et une attention particulière à l'expérience utilisateur.",
+    "viewProject": "Voir le Projet",
+    "items": [
+      {
+        "id": 1,
+        "title": "Système de File d'Attente TicketFlow",
+        "description": "Système de gestion de file d'attente d'entreprise avec génération de tickets, tableau de bord du personnel et écran d'affichage en temps réel.",
+        "path": "/src/assets/ticketflow.png",
+        "tech": ["React", "Node.js", "WebSocket", "MySQL"]
+      },
+      {
+        "id": 2,
+        "title": "Tableau de Bord de Consultation",
+        "description": "Tableau de bord orienté personnel pour gérer les files d'attente, appeler les clients et surveiller le flux de service en temps réel.",
+        "path": "/src/assets/ticketflow.png",
+        "tech": ["React", "Tailwind", "Socket.io"]
+      },
+      {
+        "id": 3,
+        "title": "Écran d'Affichage Public",
+        "description": "Système d'affichage en temps réel montrant les tickets actuels et les annonces sur grands écrans.",
+        "path": "/src/assets/ticketflow.png",
+        "tech": ["React", "WebSocket"]
+      },
+      {
+        "id": 4,
+        "title": "Agent d'Automatisation Vocal",
+        "description": "Assistant vocal basé sur Python capable d'exécuter des commandes système et d'automatiser des tâches.",
+        "path": "/src/assets/python.png",
+        "tech": ["Python", "SpeechRecognition", "OS"]
+      },
+      {
+        "id": 5,
+        "title": "Générateur de PowerPoint IA",
+        "description": "Système automatisé qui convertit des documents en diapositives de présentation modernes et structurées.",
+        "path": "/src/assets/python.png",
+        "tech": ["Python", "IA", "API"]
+      },
+      {
+        "id": 6,
+        "title": "Automatisation Google Drive",
+        "description": "Workflow qui surveille le stockage cloud et génère automatiquement des sorties formatées à partir des fichiers téléchargés.",
+        "path": "/src/assets/python.png",
+        "tech": ["Node.js", "Google API"]
+      },
+      {
+        "id": 7,
+        "title": "Système de Gestion Scolaire",
+        "description": "Plateforme complète pour gérer les étudiants, les enseignants, les classes et les emplois du temps.",
+        "path": "/src/assets/school.png",
+        "tech": ["React", "PHP", "MySQL"]
+      },
+      {
+        "id": 8,
+        "title": "Plateforme d'Examens en Ligne",
+        "description": "Système d'examen en ligne sécurisé avec chronomètre, notation et logique anti-triche.",
+        "path": "/src/assets/school.png",
+        "tech": ["React", "Node.js", "MongoDB"]
+      },
+      {
+        "id": 9,
+        "title": "Site Portfolio Freelance",
+        "description": "Portfolio personnel moderne avec animations et design responsive.",
+        "path": "/src/assets/unity.png",
+        "tech": ["React", "Framer Motion"]
+      },
+      {
+        "id": 10,
+        "title": "Tableau de Bord E-commerce",
+        "description": "Tableau de bord avancé pour gérer les produits, les commandes et les analyses.",
+        "path": "/src/assets/ticketflow.png",
+        "tech": ["React", "Chart.js"]
+      },
+      {
+        "id": 11,
+        "title": "Bot de Publication Facebook",
+        "description": "Système d'automatisation qui programme et publie du contenu sur les pages Facebook.",
+        "path": "/src/assets/python.png",
+        "tech": ["Node.js", "Facebook API"]
+      },
+      {
+        "id": 12,
+        "title": "Système d'Identité de Marque",
+        "description": "Kit de marquage complet incluant typographie, couleurs et composants UI.",
+        "path": "/src/assets/unity.png",
+        "tech": ["Figma"]
+      },
+      {
+        "id": 13,
+        "title": "Collection Design de Vêtements Anime",
+        "description": "Designs personnalisés de T-shirts et vêtements de compression sur thème anime pour une marque locale.",
+        "path": "/src/assets/unity.png",
+        "tech": ["Photoshop", "Illustrator"]
+      },
+      {
+        "id": 14,
+        "title": "Moniteur Environnemental IoT",
+        "description": "Système de capteurs basé sur Arduino pour suivre la température, l'humidité et la qualité de l'air.",
+        "path": "/src/assets/unity.png",
+        "tech": ["Arduino", "C++", "Capteurs"]
+      },
+      {
+        "id": 15,
+        "title": "Système de Gestion d'Inventaire",
+        "description": "Application de bureau pour suivre les niveaux de stock, les commandes et les informations fournisseurs.",
+        "path": "/src/assets/ticketflow.png",
+        "tech": ["C#", "WinForms", "SQLite"]
+      },
+      {
+        "id": 16,
+        "title": "Chatbot de Support Client",
+        "description": "Chatbot alimenté par IA pour gérer les demandes de clients courantes et les tickets de support.",
+        "path": "/src/assets/python.png",
+        "tech": ["Python", "NLP", "API"]
+      },
+      {
+        "id": 17,
+        "title": "Outil d'Automatisation de Tâches",
+        "description": "Constructeur de workflow personnalisé pour automatiser les tâches commerciales répétitives.",
+        "path": "/src/assets/python.png",
+        "tech": ["Node.js", "Automation"]
+      },
+      {
+        "id": 18,
+        "title": "Intégration Assistant IA",
+        "description": "Chatbot IA personnalisé intégré dans des sites web pour l'interaction client.",
+        "path": "/src/assets/python.png",
+        "tech": ["IA", "API", "JavaScript"]
+      }
+    ]
+  },
+  "useCases": {
+    "label": "Impact",
+    "number": "06",
+    "title": "Ce que je peux vous aider à",
+    "titleHighlight": "atteindre",
+    "items": [
+      "Réduire le travail manuel par l'automatisation",
+      "Construire des outils internes pour votre équipe",
+      "Lancer votre produit SaaS",
+      "Numériser vos opérations commerciales",
+      "Améliorer l'expérience client"
+    ],
+    "cta": "Transformons vos idées en réalité. Je travaille avec des entreprises de toutes tailles pour créer des solutions qui génèrent de vrais résultats."
+  },
+  "roadmap": {
+    "label": "Parcours",
+    "title": "Le",
+    "titleHighlight": "Chemin",
+    "titleEnd": "Parcouru",
+    "education": "Éducation & Apprentissage",
+    "experience": "Expérience Professionnelle",
+    "continued": "À suivre...",
+    "milestones": [
+      {
+        "year": "2020",
+        "title": "GCE Niveau Ordinaire",
+        "description": "Découverte de Python grâce au développement de jeux avec Pygame. La création de petits jeux m'a appris les fondamentaux de la programmation et a déclenché ma passion pour la tech."
+      },
+      {
+        "year": "2021",
+        "title": "Sixième Inférieure",
+        "description": "Exploration de C# et Unity, création de jeux qui ont renforcé les compétences en logique. Apprentissage des bases SQL et prise de conscience de l'écosystème tech."
+      },
+      {
+        "year": "2022",
+        "title": "Sixième Supérieure",
+        "description": "Approfondissement des connaissances en C# et Unity avec des projets structurés. Amélioration des compétences SQL pour les applications basées sur les données et la conception de systèmes."
+      },
+      {
+        "year": "2023",
+        "title": "Première Année Université",
+        "description": "Concentration sur le backend avec PHP et MySQL. Création d'APIs, exploration de .NET avec WinForms, SQLite, et construction de projets full-stack."
+      },
+      {
+        "year": "2024",
+        "title": "Projets & Collaboration",
+        "description": "Travail sur plusieurs projets utilisant Git/GitHub. Construction de projets React + PHP avec des APIs personnalisées, acquérant une solide expérience full-stack."
+      }
+    ],
+    "experiences": [
+      {
+        "year": "2023",
+        "title": "Stage – Chiala",
+        "description": "Excel et Microsoft Office pour la documentation. Maintenance informatique, dépannage et développement de compétences pratiques en support IT."
+      },
+      {
+        "year": "2024",
+        "title": "Stage – PEFSCOM SARL",
+        "description": "Développement web full-stack, applications desktop, gestion de bases de données et réseaux. Renforcement de la polyvalence technique dans un cadre professionnel."
+      }
+    ]
+  },
+  "skills": {
+    "capabilities": "Capacités",
+    "title": "Compétences",
+    "titleHighlight": "Sélectionnées",
+    "categories": {
+      "development": "Développement",
+      "architecture": "Architecture"
+    },
+    "available": "DISPONIBLE POUR PROJETS"
+  },
+  "footer": {
+    "cta": {
+      "available": "Disponible pour freelance & collaboration",
+      "title": "Construisons quelque chose",
+      "titleHighlight": "d'impactant",
+      "startProject": "Démarrer un Projet",
+      "scheduleCall": "Planifier un Appel"
+    },
+    "brand": {
+      "name": "Brad",
+      "description": "Développeur fullstack créant des expériences numériques propres et réactives."
+    },
+    "explore": "Explorer",
+    "connect": "Connecter",
+    "copyright": "© {{year}} Brad Emery",
+    "designed": "Conçu & construit avec",
+    "intention": "intention"
+  },
+  "language": {
+    "en": "EN",
+    "fr": "FR",
+    "switch": "Changer de langue"
+  }
+}
