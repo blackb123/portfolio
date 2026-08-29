@@ -25,7 +25,7 @@ export default function CurrentWork() {
       style={{ padding: '20px 20px' }}
     >
       {/* Full Background Image */}
-      <div className="absolute inset-0 w-screen z-0" >
+      <div className="absolute inset-0 w-full z-0" >
         <div className="relative h-full overflow-hidden">
           <motion.img
             src="/src/assets/lastest_project.png"

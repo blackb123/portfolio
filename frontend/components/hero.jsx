@@ -7,7 +7,10 @@ import heroimgmobile from "../src/assets/heroimgmobile.png"
 export default function Hero() {
   const containerRef = useRef(null);
   const heroRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(max-width: 767px)").matches;
+  });
   const [scrollProgress, setScrollProgress] = useState(0);
   const { t } = useTranslation();
 
@@ -27,11 +30,27 @@ export default function Hero() {
   ];
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+
+    const handleResize = (event) => {
+      setIsMobile(event.matches);
     };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleResize);
+    } else {
+      mediaQuery.addListener(handleResize);
+    }
+
+    setIsMobile(mediaQuery.matches);
+
+    return () => {
+      if (typeof mediaQuery.removeEventListener === "function") {
+        mediaQuery.removeEventListener("change", handleResize);
+      } else {
+        mediaQuery.removeListener(handleResize);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -102,7 +121,7 @@ export default function Hero() {
 
         {/* Social Icons (Mobile) – now with inline SVGs */}
           <motion.div
-            className="absolute bottom-8 left-6 z-50"
+            className="absolute bottom-8 left-4 sm:left-6 z-50"
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}

@@ -27,7 +27,7 @@ export default function ElegantNavbar() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
-        className={`fixed top-0 left-0 z-50 w-[100vw] transition-all duration-700 ${
+        className={`fixed top-0 left-0 z-50 w-full max-w-full transition-all duration-700 ${
           scrolled ? "py-2 md:py-3 bg-black/90 backdrop-blur-lg " : "py-1 md:py-2 bg-transparent"
         }`}
       >

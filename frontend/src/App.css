@@ -24,6 +24,15 @@ body {
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+#root,
+.app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 ::selection {

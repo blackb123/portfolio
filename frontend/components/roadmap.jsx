@@ -77,7 +77,7 @@ export default function Roadmap() {
       style={{ padding: '30px 0' }}
     >
       {/* Background gradient */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-neutral-800 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-neutral-800 to-transparent max-w-full" />
 
       {/* Header */}
       <div className="px-8 py-32 md:py-48">
