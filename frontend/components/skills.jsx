@@ -1,76 +1,86 @@
 import { motion } from "framer-motion";
-import { useTranslation } from 'react-i18next';
 
 const skillCategoriesData = [
   {
-    categoryKey: "dev",
+    category: "Product & web",
     items: [
-      { name: "Python", level: "01" },
-      { name: "JavaScript", level: "02" },
-      { name: "C# / .NET", level: "03" },
-      { name: "PostgreSQL", level: "04" },
+      { name: "React", level: "01" },
+      { name: "Next.js", level: "02" },
+      { name: "JavaScript / TypeScript", level: "03" },
+      { name: "Tailwind / CSS", level: "04" },
     ]
   },
   {
-    categoryKey: "arch",
+    category: "Automation & backend",
     items: [
-      { name: "React / Three.js", level: "05" },
-      { name: "FastAPI", level: "06" },
-      { name: "n8n Automation", level: "07" },
-      { name: "IoT / Arduino", level: "08" },
+      { name: "n8n", level: "05" },
+      { name: "Python", level: "06" },
+      { name: "FastAPI", level: "07" },
+      { name: "Node.js", level: "08" },
+    ]
+  },
+  {
+    category: "Infrastructure",
+    items: [
+      { name: "VPS setup", level: "09" },
+      { name: "Linux & Nginx", level: "10" },
+      { name: "Docker", level: "11" },
+      { name: "SSL / domain config", level: "12" },
+    ]
+  },
+  {
+    category: "DevOps & delivery",
+    items: [
+      { name: "GitHub Actions", level: "13" },
+      { name: "CI / CD pipelines", level: "14" },
+      { name: "Monitoring & logs", level: "15" },
+      { name: "Deploy automation", level: "16" },
     ]
   }
 ];
 
 export default function ElegantSkills() {
-  const { t } = useTranslation();
-  const categoriesData = t('skills.categories', { returnObjects: true });
-  const skillCategories = Array.isArray(categoriesData) ? categoriesData : skillCategoriesData;
-
   return (
     <section className="bg-black text-white py-64 px-12 md:px-24" style={{ padding: '30px 0' }}>
-      <div className="max-w-5xl mx-auto">
-        
-        {/* Minimal Header */}
-        <div className="mb-40">
-          <motion.p 
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-20">
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-[10px] uppercase tracking-[0.5em] text-neutral-600 mb-4"
           >
-            {t('skills.label')}
+            Skills
           </motion.p>
-          <h2 className="text-6xl md:text-9xl font-light tracking-tighter leading-[0.8]">
-            {t('skills.title')}{" "}<span className="opacity-20 italic">{t('skills.titleHighlight')}</span>
+          <h2 className="text-5xl md:text-8xl font-light tracking-tighter leading-[0.8]">
+            Systems, automations and <span className="opacity-30 italic">deployment workflows</span>
           </h2>
         </div>
 
-        {/* The List Layout - No Bars, Just Typography */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-40">
-          {skillCategories.map((cat, i) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16">
+          {skillCategoriesData.map((cat, i) => (
             <div key={i} className="flex flex-col">
-              <p className="text-neutral-700 text-[10px] uppercase tracking-widest mb-10 border-b border-neutral-900 pb-2">
-                {cat.category || t(`skills.${cat.categoryKey}`)}
+              <p className="text-neutral-700 text-[10px] uppercase tracking-[0.4em] mb-8 border-b border-neutral-900 pb-3">
+                {cat.category}
               </p>
-              
+
               {cat.items.map((skill, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group flex items-baseline justify-between py-8 border-b border-neutral-900 hover:border-white transition-colors duration-700"
+                  transition={{ delay: index * 0.08 }}
+                  className="group flex items-baseline justify-between py-7 border-b border-neutral-900 hover:border-white transition-colors duration-700"
                 >
-                  <div className="flex items-baseline gap-6">
+                  <div className="flex items-baseline gap-5">
                     <span className="text-[10px] font-mono text-neutral-600 group-hover:text-white transition-colors">
                       {skill.level}
                     </span>
-                    <h3 className="text-3xl md:text-5xl font-light tracking-tight group-hover:italic transition-all">
+                    <h3 className="text-2xl md:text-4xl font-light tracking-tight group-hover:italic transition-all">
                       {skill.name}
                     </h3>
                   </div>
-                  <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity text-xs tracking-widest text-neutral-500">
-                    {t('skills.available')}
+                  <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity text-[10px] uppercase tracking-[0.4em] text-neutral-500">
+                    Live
                   </div>
                 </motion.div>
               ))}

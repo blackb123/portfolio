@@ -11,6 +11,21 @@ export default function Hero() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const { t } = useTranslation();
 
+  const sectorItems = [
+    "Freight & Logistics",
+    "Clinics & Health",
+    "Transport & Mobility",
+    "Restaurants & Food",
+    "Retail & Commerce",
+    "Hotels & Hospitality",
+    "Manufacturing",
+    "Construction",
+    "Field Services",
+    "Education",
+    "Real Estate",
+    "B2B Operations"
+  ];
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -142,6 +157,20 @@ export default function Hero() {
               </a>
             </div>
           </motion.div>
+      </div>
+
+      <div className="relative border-y border-white/10 bg-[#0b0b0b] overflow-hidden">
+        <div className="sector-marquee px-3 py-2 md:py-3">
+          {[...sectorItems, ...sectorItems].map((item, index) => (
+            <div
+              key={`${item}-${index}`}
+              className="sector-pill"
+            >
+              <span className="sector-diamond">◆</span>
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* ========== 2. INTRO SECTION (Dark Background) ========== */}

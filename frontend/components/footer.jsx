@@ -75,7 +75,7 @@ export default function Footer() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
               <motion.a
-                href="https://wa.me/237671810319?text=Hi%20Brad%2C%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20working%20with%20you%20on%20a%20project."
+                href="https://wa.me/671810319?text=Hi%20Brad%2C%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20working%20with%20you%20on%20a%20project."
                 target="_blank"
                 rel="noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -86,7 +86,7 @@ export default function Footer() {
                 {t('footer.cta.startProject')}
               </motion.a>
               <motion.a
-                href="tel:+237671810319"
+                href="tel:+671810319"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-white/30 text-white font-semibold text-sm uppercase tracking-wider hover:bg-white/10 transition-colors inline-block"
@@ -94,6 +94,15 @@ export default function Footer() {
               >
                 {t('footer.cta.scheduleCall')}
               </motion.a>
+            </div>
+            <div className="pt-6 text-sm text-neutral-400">
+              <a href="mailto:emerybrad4@gmail.com" className="text-orange-400 transition hover:text-orange-300" style={{ textDecoration: 'none' }}>
+                emerybrad4@gmail.com
+              </a>
+              <span className="mx-3 text-neutral-600">/</span>
+              <a href="https://wa.me/671810319" target="_blank" rel="noreferrer" className="text-orange-400 transition hover:text-orange-300" style={{ textDecoration: 'none' }}>
+                +671 810 319
+              </a>
             </div>
           </motion.div>
         </div>
