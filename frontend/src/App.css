@@ -50,16 +50,16 @@ body {
 .site-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 3rem;
+  gap: 2rem;
   width: 100%;
 }
 
 .section-padding {
-  padding-block: clamp(3rem, 6vw, 5rem);
+  padding-block: clamp(2rem, 4vw, 3.5rem);
 }
 
 .section-padding-compact {
-  padding-block: clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(1.75rem, 3.5vw, 3rem);
 }
 
 @media (min-width: 768px) {
