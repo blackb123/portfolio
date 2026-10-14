@@ -185,7 +185,7 @@ export default function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="bg-[#0a0a0a] px-6 md:px-8 py-32 md:py-64 min-h-[80vh] flex items-center text-white border-t border-white/10"
+        className="bg-[#0a0a0a] px-6 md:px-8 py-20 md:py-32 min-h-[80vh] flex items-center text-white border-t border-white/10"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
           {/* Sidebar Label */}
@@ -228,7 +228,7 @@ export default function Hero() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="mt-32 flex flex-col md:flex-row justify-between items-start md:items-end gap-16"
+              className="mt-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-8"
             >
               <div className="max-w-xl space-y-6">
                 <p className="text-neutral-400 text-lg md:text-xl leading-relaxed font-light">
@@ -268,7 +268,7 @@ export default function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="bg-[#0a0a0a] px-6 md:px-8 py-32 md:py-48 border-t border-white/10"
+        className="bg-[#0a0a0a] px-6 md:px-8 py-16 md:py-24 border-t border-white/10"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
           {/* Sidebar Label */}

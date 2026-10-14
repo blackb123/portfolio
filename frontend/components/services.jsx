@@ -31,7 +31,7 @@ export default function Services() {
         viewport={{ once: true }}
         className="bg-black border-t border-white/10 w-full"
       >
-        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-32 md:py-48">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
           <div className="mb-16 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-[10px] uppercase tracking-[0.35em] text-orange-500">{t('services.label')}</p>
@@ -114,7 +114,7 @@ export default function Services() {
         viewport={{ once: true }}
         className="bg-black border-t border-white/10 w-full"
       >
-        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-32 md:py-48">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

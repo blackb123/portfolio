@@ -15,8 +15,8 @@ export default function Process() {
       viewport={{ once: true }}
       className="bg-[#0a0a0a] border-t border-white/10"
     >
-      <div className="px-6 md:px-8 py-32 md:py-48 min-h-[80vh] flex items-center">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
+      <div className="px-6 md:px-8 py-16 md:py-24 flex items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 w-full">
           {/* Sidebar Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -35,7 +35,7 @@ export default function Process() {
 
           {/* Main Content */}
           <div className="md:col-span-10">
-            <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
               {/* Giant Number */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}

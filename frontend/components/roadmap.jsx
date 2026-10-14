@@ -80,7 +80,7 @@ export default function Roadmap() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-neutral-800 to-transparent max-w-full" />
 
       {/* Header */}
-      <div className="px-6 md:px-8 py-32 md:py-48">
+      <div className="px-6 md:px-8 py-16 md:py-24">
         <div className="max-w-7xl mx-auto text-center">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
