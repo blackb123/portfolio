@@ -20,7 +20,7 @@ export default function Solutions() {
       viewport={{ once: true }}
       className="bg-black border-t border-white/10"
     >
-      <div className="site-container section-padding min-h-[80vh] flex items-center">
+      <div className="site-container section-padding flex items-center">
         <div className="site-grid">
           {/* Sidebar Label */}
           <motion.div
@@ -40,7 +40,7 @@ export default function Solutions() {
 
           {/* Main Content */}
           <div className="md:col-span-10">
-            <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
               {/* Giant Number */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}

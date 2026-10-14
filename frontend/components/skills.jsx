@@ -14,7 +14,7 @@ export default function ElegantSkills() {
       viewport={{ once: true }}
       className="bg-black text-white border-t border-white/10"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-32 md:py-48">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

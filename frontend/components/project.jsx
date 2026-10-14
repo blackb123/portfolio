@@ -41,7 +41,7 @@ export default function Projects() {
 
           {/* Main Content */}
           <div className="md:col-span-10 min-w-0">
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
               {/* Giant Number */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
