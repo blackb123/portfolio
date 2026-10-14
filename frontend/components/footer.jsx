@@ -47,18 +47,23 @@ export default function Footer() {
   const { t } = useTranslation();
 
   const navLinks = [
-    { label: t('Home'), href: "#" },
-    { label: t('About'), href: "#about" },
-    { label: t('Work'), href: "#project" },
-    { label: t('Journey'), href: "#roadmap" }
+    { label: t('nav.home'), href: "#" },
+    { label: t('nav.about'), href: "#about" },
+    { label: t('nav.work'), href: "#project" },
+    { label: t('nav.journey'), href: "#roadmap" },
+    { label: t('nav.contact'), href: "#contact" }
   ];
 
+  const waMessage = encodeURIComponent(t('whatsapp.message'));
+  const email = t('contact.email');
+  const phoneDisplay = t('contact.whatsapp');
+
   return (
-    <footer className="bg-[#050505] border-t border-white/5" style={{ padding: '30px 0' }}>
+    <footer className="bg-[#050505] border-t border-white/10">
 
       {/* ================= CTA ================= */}
-      <section className="px-8 py-32 md:py-48 border-t border-white/10" style={{ padding: '50px 50px' }}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <section className="px-6 md:px-8 py-32 md:py-48 border-t border-white/10">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +72,7 @@ export default function Footer() {
             className="space-y-8"
           >
             <p className="text-orange-400 text-sm font-mono uppercase tracking-[0.3em]">
-              {t('footer.cta.availability')}
+              {t('footer.cta.available')}
             </p>
             <h2 className="text-4xl md:text-6xl font-medium text-white tracking-tighter">
               {t('footer.cta.title')}{" "}
@@ -75,33 +80,31 @@ export default function Footer() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
               <motion.a
-                href="https://wa.me/671810319?text=Hi%20Brad%2C%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20working%20with%20you%20on%20a%20project."
+                href={`https://wa.me/671810319?text=${waMessage}`}
                 target="_blank"
                 rel="noreferrer"
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-orange-500 text-black font-semibold  text-sm uppercase tracking-wider hover:bg-orange-400 transition-colors inline-block"
-                style={{ paddingLeft: '15px', paddingRight: '15px', textDecoration: 'none' }}
+                whileTap={{ scale: 0.97 }}
+                className="px-6 py-3 bg-orange-500 text-black font-semibold text-xs uppercase tracking-wider hover:bg-orange-400 transition-colors inline-block rounded-full"
               >
                 {t('footer.cta.startProject')}
               </motion.a>
               <motion.a
-                href="tel:+671810319"
+                href="tel:+237671810319"
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-white/30 text-white font-semibold text-sm uppercase tracking-wider hover:bg-white/10 transition-colors inline-block"
-                style={{ paddingLeft: '15px', paddingRight: '15px', textDecoration: 'none' }}
+                whileTap={{ scale: 0.97 }}
+                className="px-6 py-3 border border-white/30 text-white font-semibold text-xs uppercase tracking-wider hover:bg-white/10 hover:border-orange-500/50 transition-all inline-block rounded-full"
               >
                 {t('footer.cta.scheduleCall')}
               </motion.a>
             </div>
             <div className="pt-6 text-sm text-neutral-400">
-              <a href="mailto:emerybrad4@gmail.com" className="text-orange-400 transition hover:text-orange-300" style={{ textDecoration: 'none' }}>
-                emerybrad4@gmail.com
+              <a href={`mailto:${email}`} className="text-orange-400 transition hover:text-orange-300">
+                {email}
               </a>
               <span className="mx-3 text-neutral-600">/</span>
-              <a href="https://wa.me/671810319" target="_blank" rel="noreferrer" className="text-orange-400 transition hover:text-orange-300" style={{ textDecoration: 'none' }}>
-                +671 810 319
+              <a href={`https://wa.me/671810319?text=${waMessage}`} target="_blank" rel="noreferrer" className="text-orange-400 transition hover:text-orange-300">
+                {phoneDisplay}
               </a>
             </div>
           </motion.div>
@@ -110,13 +113,13 @@ export default function Footer() {
      
 
       {/* ================= MAIN FOOTER ================= */}
-      <section className="px-6 py-24 md:py-32 border-t border-white/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-12 gap-12">
+      <section className="px-6 md:px-8 py-24 md:py-32 border-t border-white/10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           {/* Brand */}
           <div className="md:col-span-6">
             <FadeIn>
               <h3 className="text-2xl text-white">
-                Brad<span className="text-orange-400">.</span>
+                {t('brand.name')}<span className="text-orange-400">.</span>
               </h3>
               <p className="text-neutral-500 text-sm mt-5 max-w-sm">
                 {t('footer.brand.description')}
@@ -170,15 +173,15 @@ export default function Footer() {
       </section>
 
       {/* ================= BOTTOM ================= */}
-      <section className="px-6 py-6 border-t border-white/5 mt-16 md:mt-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-neutral-500">
+      <section className="px-6 md:px-8 py-6 border-t border-white/10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-neutral-500">
 
-          <p>© {new Date().getFullYear()} Brad Emery</p>
+          <p>© {new Date().getFullYear()} {t('brand.fullName')}</p>
 
           <p className="flex items-center gap-1">
-            Designed & built with
+            {t('footer.designed')}
             <span className="text-orange-400">✦</span>
-            <span className="text-orange-400">intention</span>
+            <span className="text-orange-400">{t('footer.intention')}</span>
           </p>
 
         </div>

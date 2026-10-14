@@ -1,28 +1,75 @@
 {
+  "brand": {
+    "name": "Brad Studio",
+    "initial": "BE",
+    "firstName": "Brad",
+    "lastName": "Emery",
+    "fullName": "Brad Emery",
+    "location": "Douala, Cameroun"
+  },
   "nav": {
     "home": "Accueil",
     "about": "À propos",
     "work": "Projets",
+    "mobile": "Mobile",
     "journey": "Parcours",
     "solutions": "Solutions",
     "process": "Processus",
     "services": "Services",
-    "impact": "Impact"
+    "impact": "Impact",
+    "contact": "Contact",
+    "close": "Fermer",
+    "copyright": "© {{year}} Brad Emery — Douala"
   },
   "hero": {
+    "welcome": "BRAD STUDIO",
     "scroll": "Défiler",
-    "welcome": "BIENVENUE"
+    "sectors": [
+      "Transport & Logistique",
+      "Cliniques & Santé",
+      "Mobilité",
+      "Restauration",
+      "Commerce de détail",
+      "Hôtellerie",
+      "Industrie",
+      "Construction",
+      "Services sur site",
+      "Éducation",
+      "Immobilier",
+      "Opérations B2B"
+    ],
+    "introLabel": "Intro",
+    "introHeadline": "Je suis un",
+    "introHeadlineHighlight": "développeur fullstack",
+    "introHeadlineEnd": "qui crée de",
+    "introHeadlineEndHighlight": "vrais produits",
+    "introHeadlineTail": "pour les fondateurs et les équipes. Je mise sur des interfaces claires, des décisions précises et une exécution rapide.",
+    "introParagraph": "Je transforme des idées en logiciels fonctionnels — applications web, outils internes et automatisation — livrés proprement, du concept au lancement.",
+    "introTags": ["Applications Web", "Automatisation", "Outils IA"],
+    "seeWork": "Voir mes projets",
+    "workLabel": "Travail",
+    "workNumber": "01",
+    "workTitle": "Branding & Produits Numériques",
+    "workDescription": "De la stratégie de marque et de l'identité visuelle aux applications web complètes et aux outils internes — construits autour du fonctionnement réel de votre entreprise.",
+    "workItems": [
+      "Stratégie de marque & message",
+      "Logo & Identité visuelle",
+      "Applications web",
+      "Outils internes & tableaux de bord",
+      "Automatisation de flux",
+      "Intégrations IA"
+    ]
   },
   "about": {
     "label": "À propos",
     "number": "02",
     "title": "Un",
-    "titleHighlight": "développeur",
-    "titleEnd": "passionné avec une forte curiosité pour la",
-    "titleEndHighlight": "technologie, le design et la résolution de problèmes.",
-    "positioning": "Développeur fullstack spécialisé dans la création de systèmes évolutifs et d'outils d'automatisation.",
-    "description": "J'aime créer des applications propres, réactives et conviviales qui équilibrent fonctionnalité et design. Chaque projet est une opportunité d'apprendre, d'expérimenter et d'affiner mes compétences—from smooth navigation to accessible layouts.",
-    "positioning2": "Je ne me contente pas de créer des interfaces, je conçois des systèmes complets qui résolvent de véritables problèmes opérationnels.",
+    "titleHighlight": "développeur fullstack",
+    "titleEnd": "qui construit des logiciels résolvant de",
+    "titleEndHighlight": "vrais problèmes opérationnels.",
+    "positioning": "Développeur fullstack spécialisé dans les applications web évolutives, les systèmes d'automatisation et les outils propulsés par l'IA.",
+    "description": "Je conçois et construis des applications qui allient interfaces soignées et backends solides — des tableaux de bord en temps réel à l'automatisation de flux. Chaque projet est une occasion d'apprendre, de s'affiner et de livrer quelque chose d'utile.",
+    "positioning2": "Je ne me contente pas de créer des interfaces — je conçois des systèmes complets qui font avancer vos opérations.",
     "details": {
       "label": "Détails",
       "email": "Email",
@@ -34,7 +81,18 @@
       "experienceValue": "5+ ans",
       "focusValue": "Développement Fullstack"
     },
-    "quote": "À l'avenir, je vise à continuer d'élargir mes connaissances, à collaborer avec d'autres et à créer des solutions numériques impactantes qui connectent les gens à la technologie."
+    "skills": [
+      "HTML5 / CSS3",
+      "JavaScript (ES6+)",
+      "React & Vite",
+      "Bootstrap 5",
+      "Framer Motion",
+      "Node.js",
+      "Python",
+      "API REST",
+      "Git"
+    ],
+    "quote": "Je vise à continuer d'apprendre, de collaborer et de livrer des produits numériques qui connectent les gens à la technologie."
   },
   "solutions": {
     "label": "Solutions",
@@ -49,13 +107,13 @@
       },
       {
         "title": "Automatisation d'Entreprise",
-        "description": "Systèmes d'automatisation des tâches et intégration de workflows",
-        "items": ["Automatisation des tâches", "Automatisation des workflows (n8n, APIs)", "Intégrations IA"]
+        "description": "Systèmes d'automatisation des tâches et intégration de flux de travail",
+        "items": ["Automatisation des tâches", "Automatisation de flux (n8n, API)", "Intégrations IA"]
       },
       {
         "title": "Systèmes en Temps Réel",
         "description": "Tableaux de bord en direct et systèmes de surveillance",
-        "items": ["Systèmes de files d'attente (comme TicketFlow)", "Tableaux de bord en direct", "Systèmes de surveillance"]
+        "items": ["Systèmes de files d'attente (TicketFlow)", "Tableaux de bord en direct", "Systèmes de surveillance"]
       },
       {
         "title": "Outils Propulsés par l'IA",
@@ -77,60 +135,111 @@
     "steps": [
       {
         "number": "01",
-        "title": "Comprendre votre problème",
-        "description": "Plongée profonde dans vos défis commerciaux et vos objectifs"
+        "title": "Comprendre le problème",
+        "description": "J'analyse vos défis et vos objectifs avant d'écrire la moindre ligne de code."
       },
       {
         "number": "02",
         "title": "Concevoir la solution",
-        "description": "Créer une feuille de route claire et une architecture technique"
+        "description": "Une feuille de route claire et une architecture technique compréhensibles par tous."
       },
       {
         "number": "03",
-        "title": "Construire rapidement et proprement",
-        "description": "Développer avec les meilleures pratiques modernes et du code propre"
+        "title": "Construire vite et proprement",
+        "description": "Bonnes pratiques modernes et code propre, livré par incréments fonctionnels."
       },
       {
         "number": "04",
         "title": "Tester et optimiser",
-        "description": "Assurer la qualité, les performances et la fiabilité"
+        "description": "Qualité, performance et fiabilité vérifiées avant le lancement."
       },
       {
         "number": "05",
-        "title": "Déployer et supporter",
-        "description": "Lancer avec succès et fournir un support continu"
+        "title": "Déployer et accompagner",
+        "description": "Lancement en douceur et support continu après la mise en production."
       }
     ]
   },
   "services": {
     "label": "Services",
     "number": "05",
-    "title": "Services que j'",
-    "titleHighlight": "Offre",
+    "title": "Services que je",
+    "titleHighlight": "Propose",
+    "whatsappCta": "Discuter sur WhatsApp",
+    "priceLabel": "Devis sur mesure",
+    "discussPlan": "Discuter de cette offre",
+    "solutionsLabel": "Solutions",
+    "solutionsTitle": "Des solutions",
+    "solutionsTitleHighlight": "sur mesure",
+    "solutionsSubtitle": "Chaque solution est conçue autour du fonctionnement réel de votre entreprise — du lancement à la croissance.",
     "items": [
       {
         "title": "Développement Web Fullstack",
-        "description": "Applications web complètes du concept au déploiement, adaptées aux besoins de votre entreprise"
+        "description": "Applications web complètes, du concept au déploiement, adaptées à votre entreprise."
       },
       {
         "title": "Systèmes d'Automatisation",
-        "description": "Rationaliser les tâches répétitives et les workflows pour gagner du temps et réduire les erreurs"
+        "description": "Rationalisez les tâches répétitives et les flux pour gagner du temps et réduire les erreurs."
       },
       {
         "title": "Développement et Intégration d'API",
-        "description": "Connectez vos systèmes de manière transparente avec des API robustes et des intégrations tierces"
+        "description": "Connectez vos systèmes avec des API robustes et des intégrations tierces."
       },
       {
         "title": "Design UI/UX",
-        "description": "Créer des interfaces intuitives que les utilisateurs adorent et qui stimulent l'engagement"
+        "description": "Des interfaces intuitives que les utilisateurs prennent plaisir à utiliser."
       },
       {
         "title": "Architecture de Systèmes",
-        "description": "Concevoir des systèmes évolutifs et maintenables qui grandissent avec votre entreprise"
+        "description": "Des systèmes évolutifs et maintenables qui grandissent avec votre entreprise."
       },
       {
         "title": "Conseil Technique",
-        "description": "Conseils d'experts sur les décisions technologiques et les stratégies de transformation numérique"
+        "description": "Un accompagnement sur les choix technologiques et la stratégie digitale."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Systèmes E-commerce",
+        "tag": "Construire & évoluer",
+        "highlight": "Le plus demandé",
+        "description": "Boutiques en ligne, flux produits, logique de paiement, synchronisation stock et suivi des ventes.",
+        "features": ["Shopify / storefront sur mesure", "Configuration paiements", "Automatisation stock", "Funnels marketing"]
+      },
+      {
+        "name": "Applications Mobiles",
+        "tag": "Lancement rapide",
+        "highlight": "MVP prêt",
+        "description": "Expériences mobiles au rendu natif pour les entreprises de services, outils internes et portails clients.",
+        "features": ["MVP iOS / Android", "Connexion & tableau de bord", "Notifications push", "Maintenance appli"]
+      },
+      {
+        "name": "Automatisation",
+        "tag": "Gain opérationnel",
+        "highlight": "Axé ROI",
+        "description": "Utilisez n8n, webhooks et intégrations pour éliminer le travail répétitif entre équipes et outils.",
+        "features": ["Workflows n8n", "Sync CRM + ERP", "Automatisations WhatsApp", "Routage des tâches"]
+      },
+      {
+        "name": "ERP & Outils Internes",
+        "tag": "Maîtrisez vos opérations",
+        "highlight": "Logique métier",
+        "description": "Tableaux de bord, outils d'administration, rapports et systèmes opérationnels construits autour de votre flux.",
+        "features": ["Tableaux de bord internes", "Accès par rôle", "Rapports & exports", "Alertes & notifications"]
+      },
+      {
+        "name": "Maintenance",
+        "tag": "Toujours en ligne",
+        "highlight": "Disponibilité",
+        "description": "Support, surveillance, correctifs de déploiement, mises à jour et optimisation de la performance.",
+        "features": ["Correction de bugs", "Surveillance hébergement", "Déploiements", "Mises à jour sécurité"]
+      },
+      {
+        "name": "IA & Idées de Process",
+        "tag": "Nouveaux revenus",
+        "highlight": "Idée à produit",
+        "description": "Validation de concept, flux intelligents et prototypes rapides pour les idées qui ont besoin d'une feuille de route technique claire.",
+        "features": ["Sprint de découverte", "Design de prototype", "Plan d'architecture", "Automatisation croissance"]
       }
     ]
   },
@@ -141,134 +250,100 @@
     "titleHighlight": "Sélectionnés",
     "subtitle": "qui démontrent",
     "subtitleHighlight": "la résolution de problèmes réels.",
-    "description": "Chaque projet représente un défi unique relevé avec du code propre, un design réfléchi et une attention particulière à l'expérience utilisateur.",
-    "viewProject": "Voir le Projet",
+    "description": "Chaque projet est un vrai problème résolu avec du code propre, un design réfléchi et une attention particulière à l'utilisateur final.",
+    "viewProject": "Voir le projet",
+    "roleLabel": "Rôle",
+    "stackLabel": "Stack",
     "items": [
       {
         "id": 1,
         "title": "Système de File d'Attente TicketFlow",
-        "description": "Système de gestion de file d'attente d'entreprise avec génération de tickets, tableau de bord du personnel et écran d'affichage en temps réel.",
+        "summary": "Gestion de file d'attente d'entreprise avec génération de tickets, tableau de bord du personnel et écrans d'affichage en temps réel.",
+        "role": "Développeur Fullstack",
         "path": "/src/assets/ticketflow.png",
-        "tech": ["React", "Node.js", "WebSocket", "MySQL"]
+        "tech": ["React", "Node.js", "WebSocket", "MySQL"],
+        "liveLink": "TODO : ajouter l'URL en ligne"
       },
       {
         "id": 2,
-        "title": "Tableau de Bord de Consultation",
-        "description": "Tableau de bord orienté personnel pour gérer les files d'attente, appeler les clients et surveiller le flux de service en temps réel.",
-        "path": "/src/assets/ticketflow.png",
-        "tech": ["React", "Tailwind", "Socket.io"]
+        "title": "Système de Gestion Scolaire",
+        "summary": "Plateforme complète pour gérer les étudiants, enseignants, classes et emplois du temps.",
+        "role": "Développeur Fullstack",
+        "path": "/src/assets/school.png",
+        "tech": ["React", "PHP", "MySQL"],
+        "liveLink": "TODO : ajouter l'URL en ligne"
       },
       {
         "id": 3,
-        "title": "Écran d'Affichage Public",
-        "description": "Système d'affichage en temps réel montrant les tickets actuels et les annonces sur grands écrans.",
-        "path": "/src/assets/ticketflow.png",
-        "tech": ["React", "WebSocket"]
+        "title": "Plateforme d'Examens en Ligne",
+        "summary": "Système d'examen en ligne sécurisé avec chronomètre, notation et logique anti-triche.",
+        "role": "Développeur Fullstack",
+        "path": "/src/assets/school.png",
+        "tech": ["React", "Node.js", "MongoDB"],
+        "liveLink": "TODO : ajouter l'URL en ligne"
       },
       {
         "id": 4,
         "title": "Agent d'Automatisation Vocal",
-        "description": "Assistant vocal basé sur Python capable d'exécuter des commandes système et d'automatiser des tâches.",
+        "summary": "Assistant vocal Python qui exécute des commandes système et automatise les tâches de bureau.",
+        "role": "Développeur Solo",
         "path": "/src/assets/python.png",
-        "tech": ["Python", "SpeechRecognition", "OS"]
+        "tech": ["Python", "SpeechRecognition", "OS"],
+        "liveLink": "TODO : ajouter l'URL en ligne ou le code source"
       },
       {
         "id": 5,
         "title": "Générateur de PowerPoint IA",
-        "description": "Système automatisé qui convertit des documents en diapositives de présentation modernes et structurées.",
+        "summary": "Système automatisé qui transforme des documents en diapositives de présentation structurées.",
+        "role": "Développeur Solo",
         "path": "/src/assets/python.png",
-        "tech": ["Python", "IA", "API"]
+        "tech": ["Python", "IA", "API"],
+        "liveLink": "TODO : ajouter l'URL en ligne ou le code source"
       },
       {
         "id": 6,
         "title": "Automatisation Google Drive",
-        "description": "Workflow qui surveille le stockage cloud et génère automatiquement des sorties formatées à partir des fichiers téléchargés.",
+        "summary": "Flux qui surveille le stockage cloud et génère automatiquement des sorties formatées à partir des fichiers téléchargés.",
+        "role": "Développeur Solo",
         "path": "/src/assets/python.png",
-        "tech": ["Node.js", "Google API"]
+        "tech": ["Node.js", "Google API"],
+        "liveLink": "TODO : ajouter l'URL en ligne ou le code source"
       },
       {
         "id": 7,
-        "title": "Système de Gestion Scolaire",
-        "description": "Plateforme complète pour gérer les étudiants, les enseignants, les classes et les emplois du temps.",
-        "path": "/src/assets/school.png",
-        "tech": ["React", "PHP", "MySQL"]
+        "title": "Système de Gestion d'Inventaire",
+        "summary": "Application de bureau pour suivre les niveaux de stock, les commandes et les informations fournisseurs.",
+        "role": "Développeur Solo",
+        "path": "/src/assets/ticketflow.png",
+        "tech": ["C#", "WinForms", "SQLite"],
+        "liveLink": "TODO : ajouter l'URL en ligne ou le code source"
       },
       {
         "id": 8,
-        "title": "Plateforme d'Examens en Ligne",
-        "description": "Système d'examen en ligne sécurisé avec chronomètre, notation et logique anti-triche.",
-        "path": "/src/assets/school.png",
-        "tech": ["React", "Node.js", "MongoDB"]
+        "title": "Chatbot de Support Client",
+        "summary": "Chatbot alimenté par l'IA pour gérer les demandes clients courantes et les tickets de support.",
+        "role": "Développeur Solo",
+        "path": "/src/assets/python.png",
+        "tech": ["Python", "NLP", "API"],
+        "liveLink": "TODO : ajouter l'URL en ligne ou le code source"
       },
       {
         "id": 9,
-        "title": "Site Portfolio Freelance",
-        "description": "Portfolio personnel moderne avec animations et design responsive.",
-        "path": "/src/assets/unity.png",
-        "tech": ["React", "Framer Motion"]
+        "title": "Outil d'Automatisation de Tâches",
+        "summary": "Constructeur de flux personnalisé pour automatiser les tâches commerciales répétitives.",
+        "role": "Développeur Solo",
+        "path": "/src/assets/python.png",
+        "tech": ["Node.js", "Automatisation"],
+        "liveLink": "TODO : ajouter l'URL en ligne ou le code source"
       },
       {
         "id": 10,
-        "title": "Tableau de Bord E-commerce",
-        "description": "Tableau de bord avancé pour gérer les produits, les commandes et les analyses.",
-        "path": "/src/assets/ticketflow.png",
-        "tech": ["React", "Chart.js"]
-      },
-      {
-        "id": 11,
-        "title": "Bot de Publication Facebook",
-        "description": "Système d'automatisation qui programme et publie du contenu sur les pages Facebook.",
-        "path": "/src/assets/python.png",
-        "tech": ["Node.js", "Facebook API"]
-      },
-      {
-        "id": 12,
-        "title": "Système d'Identité de Marque",
-        "description": "Kit de marquage complet incluant typographie, couleurs et composants UI.",
-        "path": "/src/assets/unity.png",
-        "tech": ["Figma"]
-      },
-      {
-        "id": 13,
-        "title": "Collection Design de Vêtements Anime",
-        "description": "Designs personnalisés de T-shirts et vêtements de compression sur thème anime pour une marque locale.",
-        "path": "/src/assets/unity.png",
-        "tech": ["Photoshop", "Illustrator"]
-      },
-      {
-        "id": 14,
-        "title": "Moniteur Environnemental IoT",
-        "description": "Système de capteurs basé sur Arduino pour suivre la température, l'humidité et la qualité de l'air.",
-        "path": "/src/assets/unity.png",
-        "tech": ["Arduino", "C++", "Capteurs"]
-      },
-      {
-        "id": 15,
-        "title": "Système de Gestion d'Inventaire",
-        "description": "Application de bureau pour suivre les niveaux de stock, les commandes et les informations fournisseurs.",
-        "path": "/src/assets/ticketflow.png",
-        "tech": ["C#", "WinForms", "SQLite"]
-      },
-      {
-        "id": 16,
-        "title": "Chatbot de Support Client",
-        "description": "Chatbot alimenté par IA pour gérer les demandes de clients courantes et les tickets de support.",
-        "path": "/src/assets/python.png",
-        "tech": ["Python", "NLP", "API"]
-      },
-      {
-        "id": 17,
-        "title": "Outil d'Automatisation de Tâches",
-        "description": "Constructeur de workflow personnalisé pour automatiser les tâches commerciales répétitives.",
-        "path": "/src/assets/python.png",
-        "tech": ["Node.js", "Automation"]
-      },
-      {
-        "id": 18,
-        "title": "Intégration Assistant IA",
-        "description": "Chatbot IA personnalisé intégré dans des sites web pour l'interaction client.",
-        "path": "/src/assets/python.png",
-        "tech": ["IA", "API", "JavaScript"]
+        "title": "Solution Web Radio",
+        "summary": "Plateforme de radio web avec streaming en direct, gestion de playlists et diffusion audio en temps réel.",
+        "role": "Développeur Frontend",
+        "path": "/src/assets/lastest_project.PNG",
+        "tech": ["React", "Node.js", "WebSocket"],
+        "liveLink": "TODO : ajouter l'URL en ligne"
       }
     ]
   },
@@ -284,7 +359,43 @@
       "Numériser vos opérations commerciales",
       "Améliorer l'expérience client"
     ],
-    "cta": "Transformons vos idées en réalité. Je travaille avec des entreprises de toutes tailles pour créer des solutions qui génèrent de vrais résultats."
+    "cta": "Je travaille avec des entreprises de toutes tailles pour transformer des idées en logiciels fonctionnels qui génèrent de vrais résultats."
+  },
+  "mobileApp": {
+    "label": "Mobile",
+    "number": "04",
+    "title": "Des applications mobiles",
+    "titleHighlight": "au rendu natif",
+    "description": "Je conçois des expériences mobiles multiplateformes au rendu natif sur iOS et Android — du MVP à l'application de production que vos utilisateurs apprécient réellement.",
+    "stackLabel": "Stack Mobile",
+    "capabilities": ["React Native", "Expo", "PWA", "iOS", "Android", "Notifications Push", "Mode Hors-Ligne", "Déploiement App Store"],
+    "features": [
+      {
+        "title": "MVP multiplateformes",
+        "description": "Livrez sur iOS et Android depuis une seule base de code, rapidement."
+      },
+      {
+        "title": "Authentification utilisateur",
+        "description": "Flux de connexion sécurisés, tableaux de bord et accès par rôle."
+      },
+      {
+        "title": "Fonctionnalités temps réel",
+        "description": "Synchronisation de données en direct, chat et notifications instantanées."
+      },
+      {
+        "title": "Mode hors-ligne d'abord",
+        "description": "Des applications qui fonctionnent sans connexion et se synchronisent au retour en ligne."
+      },
+      {
+        "title": "Performance native",
+        "description": "Animations fluides à 60 ips et gestes natifs sur tous les appareils."
+      },
+      {
+        "title": "Déploiement sur les stores",
+        "description": "Soumission et maintenance complètes sur l'App Store et Google Play."
+      }
+    ],
+    "cta": "Discuter d'un projet mobile"
   },
   "roadmap": {
     "label": "Parcours",
@@ -293,82 +404,138 @@
     "titleEnd": "Parcouru",
     "education": "Éducation & Apprentissage",
     "experience": "Expérience Professionnelle",
-    "continued": "À suivre...",
+    "continued": "À suivre",
     "milestones": [
       {
         "year": "2020",
         "title": "GCE Niveau Ordinaire",
-        "description": "Découverte de Python grâce au développement de jeux avec Pygame. La création de petits jeux m'a appris les fondamentaux de la programmation et a déclenché ma passion pour la tech."
+        "description": "Découverte de Python via le développement de jeux avec Pygame. La création de petits jeux m'a appris les fondamentaux de la programmation et a déclenché ma passion pour la tech."
       },
       {
         "year": "2021",
         "title": "Sixième Inférieure",
-        "description": "Exploration de C# et Unity, création de jeux qui ont renforcé les compétences en logique. Apprentissage des bases SQL et prise de conscience de l'écosystème tech."
+        "description": "Exploration de C# et Unity, création de jeux qui ont renforcé ma logique. Apprentissage des bases SQL et de l'écosystème tech."
       },
       {
         "year": "2022",
         "title": "Sixième Supérieure",
-        "description": "Approfondissement des connaissances en C# et Unity avec des projets structurés. Amélioration des compétences SQL pour les applications basées sur les données et la conception de systèmes."
+        "description": "Approfondissement de C# et Unity avec des projets structurés. Amélioration du SQL pour les applications orientées données et la conception de systèmes."
       },
       {
         "year": "2023",
         "title": "Première Année Université",
-        "description": "Concentration sur le backend avec PHP et MySQL. Création d'APIs, exploration de .NET avec WinForms, SQLite, et construction de projets full-stack."
+        "description": "Concentration sur le backend avec PHP et MySQL. Création d'API, exploration de .NET avec WinForms et SQLite, livraison de projets full-stack."
       },
       {
         "year": "2024",
         "title": "Projets & Collaboration",
-        "description": "Travail sur plusieurs projets utilisant Git/GitHub. Construction de projets React + PHP avec des APIs personnalisées, acquérant une solide expérience full-stack."
+        "description": "Travail sur plusieurs projets avec Git/GitHub. Construction de projets React + PHP avec des API personnalisées, acquérant une solide expérience full-stack."
       },
       {
         "year": "2025",
         "title": "Deuxième Année Université",
-        "description": "Études avancées en ingénierie logicielle. Construction actuelle de solutions web professionnelles et expansion de l'expertise en architectures frontend modernes."
+        "description": "Études avancées en ingénierie logicielle. Construction de solutions web professionnelles et expansion de l'expertise en architectures frontend modernes."
       }
     ],
     "experiences": [
       {
         "year": "2023",
         "title": "Stage Professionnel – Chiala IT",
-        "description": "Fourniture de support informatique et maintenance d'infrastructure en environnement professionnel. Gestion des systèmes de documentation, diagnostics matériels et résolution de problèmes techniques pour la continuité opérationnelle."
+        "description": "Support informatique et maintenance d'infrastructure. Gestion des systèmes de documentation, diagnostics matériels et résolution de problèmes techniques pour la continuité opérationnelle."
       },
       {
         "year": "2024",
         "title": "Stage – PEFSCOM SARL",
-        "description": "Développement web full-stack, applications desktop, gestion de bases de données et réseaux. Renforcement de la polyvalence technique dans un cadre professionnel."
+        "description": "Développement web full-stack, applications desktop, gestion de bases de données et réseaux. Renforcement de la polyvalence technique en cadre professionnel."
       },
       {
         "year": "2025",
         "title": "Développeur Frontend – MNLV Media",
-        "description": "Construction d'une Solution Web Radio avec capacités de streaming en direct, gestion de playlists et systèmes de diffusion audio en temps réel pour médias de broadcast."
+        "description": "Construction d'une Solution Web Radio avec streaming en direct, gestion de playlists et systèmes de diffusion audio en temps réel pour médias de broadcast."
       }
     ]
   },
   "skills": {
-    "capabilities": "Capacités",
-    "title": "Compétences",
-    "titleHighlight": "Sélectionnées",
+    "label": "Compétences",
+    "headline": "Systèmes, automatisations et",
+    "headlineHighlight": "flux de déploiement",
+    "available": "DISPONIBLE POUR PROJETS",
+    "liveTag": "En ligne",
     "categories": {
       "development": "Développement",
       "architecture": "Architecture"
     },
-    "available": "DISPONIBLE POUR PROJETS"
+    "groups": [
+      {
+        "category": "Produit & Web",
+        "items": [
+          { "name": "React", "level": "01" },
+          { "name": "Next.js", "level": "02" },
+          { "name": "JavaScript / TypeScript", "level": "03" },
+          { "name": "Tailwind / CSS", "level": "04" }
+        ]
+      },
+      {
+        "category": "Automatisation & Backend",
+        "items": [
+          { "name": "n8n", "level": "05" },
+          { "name": "Python", "level": "06" },
+          { "name": "FastAPI", "level": "07" },
+          { "name": "Node.js", "level": "08" }
+        ]
+      },
+      {
+        "category": "Infrastructure",
+        "items": [
+          { "name": "Configuration VPS", "level": "09" },
+          { "name": "Linux & Nginx", "level": "10" },
+          { "name": "Docker", "level": "11" },
+          { "name": "SSL / domaine", "level": "12" }
+        ]
+      },
+      {
+        "category": "DevOps & Livraison",
+        "items": [
+          { "name": "GitHub Actions", "level": "13" },
+          { "name": "Pipelines CI / CD", "level": "14" },
+          { "name": "Monitoring & logs", "level": "15" },
+          { "name": "Automatisation de déploiement", "level": "16" }
+        ]
+      },
+      {
+        "category": "Compétences IA",
+        "items": [
+          { "name": "Intégration LLM", "level": "17" },
+          { "name": "Prompt engineering", "level": "18" },
+          { "name": "Pipelines RAG", "level": "19" },
+          { "name": "Chatbots IA", "level": "20" }
+        ]
+      },
+      {
+        "category": "Développement Mobile",
+        "items": [
+          { "name": "React Native", "level": "21" },
+          { "name": "Expo", "level": "22" },
+          { "name": "PWA", "level": "23" },
+          { "name": "TODO : ajouter frameworks mobile", "level": "24" }
+        ]
+      }
+    ]
   },
   "footer": {
     "cta": {
       "available": "Disponible pour freelance & collaboration",
       "title": "Construisons quelque chose",
       "titleHighlight": "d'impactant",
-      "startProject": "Démarrer un Projet",
-      "scheduleCall": "Planifier un Appel"
+      "startProject": "Démarrer un projet",
+      "scheduleCall": "Planifier un appel"
     },
     "brand": {
-      "name": "Brad",
+      "name": "Brad Studio",
       "description": "Développeur fullstack créant des expériences numériques propres et réactives."
     },
     "explore": "Explorer",
     "connect": "Connecter",
-    "copyright": "© {{year}} Brad Emery",
     "designed": "Conçu & construit avec",
     "intention": "intention"
   },
@@ -376,5 +543,54 @@
     "en": "EN",
     "fr": "FR",
     "switch": "Changer de langue"
+  },
+  "contact": {
+    "label": "Contact",
+    "number": "09",
+    "title": "Parlons",
+    "titleHighlight": "de",
+    "titleEnd": "votre projet",
+    "subtitle": "Une idée, un problème, ou un système à construire ? Je suis ouvert aux missions freelance, aux collaborations et au conseil technique.",
+    "emailLabel": "Email",
+    "email": "emerybrad4@gmail.com",
+    "locationLabel": "Localisation",
+    "location": "Douala, Cameroun",
+    "whatsappLabel": "WhatsApp",
+    "whatsapp": "+237 671 810 319",
+    "whatsappCta": "Écrivez-moi sur WhatsApp",
+    "emailCta": "Envoyer un email"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions",
+    "titleHighlight": "fréquentes",
+    "subtitle": "Des réponses rapides avant de commencer.",
+    "items": [
+      {
+        "question": "Quels types de projets prenez-vous en charge ?",
+        "answer": "Applications web, outils internes, systèmes d'automatisation, intégrations IA et applications mobiles. Je me concentre sur les projets qui résolvent de vrais problèmes opérationnels pour les entreprises."
+      },
+      {
+        "question": "Combien de temps dure un projet typique ?",
+        "answer": "Cela dépend de la portée. Une landing page ou un outil simple prend 1 à 2 semaines. Une application web complète prend 4 à 8 semaines. Je vous donne un calendrier clair après avoir compris vos besoins."
+      },
+      {
+        "question": "Travaillez-vous avec des clients hors du Cameroun ?",
+        "answer": "Oui. Je travaille à distance avec des clients du monde entier. La communication se fait via WhatsApp, email ou appels vidéo selon votre préférence."
+      },
+      {
+        "question": "Quelles technologies utilisez-vous principalement ?",
+        "answer": "React, Next.js, Node.js, Python, n8n pour l'automatisation, et diverses bases de données. Je choisis la stack qui correspond le mieux aux besoins de votre projet."
+      },
+      {
+        "question": "Pouvez-vous travailler avec une équipe ou un codebase existant ?",
+        "answer": "Absolument. Je peux rejoindre votre équipe en tant que prestataire, reprendre un projet existant, ou construire quelque chose de nouveau de zéro."
+      }
+    ]
+  },
+  "whatsapp": {
+    "label": "WhatsApp",
+    "ariaLabel": "Me contacter sur WhatsApp",
+    "message": "Bonjour Brad, je souhaite discuter de mon projet avec vous."
   }
 }

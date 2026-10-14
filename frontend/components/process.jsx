@@ -13,11 +13,10 @@ export default function Process() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="bg-[#0a0a0a] border-t border-white/5"
-      style={{ padding: '30px 0' }}
+      className="bg-[#0a0a0a] border-t border-white/10"
     >
-      <div className="px-8 py-32 md:py-48 min-h-[80vh] flex items-center">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 w-full">
+      <div className="px-6 md:px-8 py-32 md:py-48 min-h-[80vh] flex items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
           {/* Sidebar Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -28,7 +27,7 @@ export default function Process() {
           >
             <div className="sticky top-10 flex flex-col gap-2">
               <span className="text-orange-500 font-bold text-xs uppercase tracking-[0.3em]">
-                // {t('process.label')}
+                {t('process.label')}
               </span>
               <div className="h-px w-12 bg-neutral-800 hidden md:block"></div>
             </div>
@@ -71,6 +70,7 @@ export default function Process() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.4 + idx * 0.1 }}
                       viewport={{ once: true }}
+                      whileHover={{ x: 4 }}
                       className="group flex items-start gap-6 py-4 border-l-2 border-neutral-800 pl-6 hover:border-orange-500/50 transition-all duration-300"
                     >
                       <span className="text-orange-500 font-mono text-sm font-bold min-w-[3rem]">

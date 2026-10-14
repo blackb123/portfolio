@@ -4,16 +4,7 @@ import { useTranslation } from 'react-i18next';
 export default function About() {
   const { t } = useTranslation();
 
-  const skills = [
-    "HTML5 / CSS3",
-    "JavaScript (ES6+)",
-    "React & Vite",
-    "Bootstrap 5",
-    "Framer Motion",
-    "Node.js",
-    "REST APIs",
-    "Git"
-  ];
+  const skills = t('about.skills', { returnObjects: true }) || [];
 
   const details = [
     { label: t('about.details.email'), value: t('about.details.emailValue') },
@@ -29,12 +20,11 @@ export default function About() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="bg-[#0a0a0a] border-t border-white/5"
-      style={{ padding: '30px 0' }}
+      className="bg-[#0a0a0a] border-t border-white/10"
     >
       {/* Main About Section */}
-      <div className="px-8 py-32 md:py-48 min-h-[80vh] flex items-center">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 w-full">
+      <div className="px-6 md:px-8 py-32 md:py-48 min-h-[80vh] flex items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
           {/* Sidebar Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -45,7 +35,7 @@ export default function About() {
           >
             <div className="sticky top-10 flex flex-col gap-2">
               <span className="text-orange-500 font-bold text-xs uppercase tracking-[0.3em]">
-                // {t('about.label')}
+                {t('about.label')}
               </span>
               <div className="h-px w-12 bg-neutral-800 hidden md:block"></div>
             </div>
@@ -125,7 +115,8 @@ export default function About() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.05 }}
                       viewport={{ once: true }}
-                      className="px-4 py-2 border border-neutral-800 rounded-full text-sm text-neutral-400 hover:border-orange-500/50 hover:text-orange-500 transition-colors"
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      className="px-4 py-2 border border-neutral-800 rounded-full text-sm text-neutral-400 hover:border-orange-500/50 hover:text-orange-500 transition-colors cursor-default"
                     >
                       {skill}
                     </motion.span>
@@ -143,10 +134,9 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        style={{ padding: '30px 0' }}
-        className="px-8 py-24 md:py-32 border-t border-white/5 mt-24 md:mt-32"
+        className="px-6 md:px-8 py-24 md:py-32 border-t border-white/10"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
           {/* Sidebar Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -157,7 +147,7 @@ export default function About() {
           >
             <div className="sticky top-10 flex flex-col gap-2">
               <span className="text-orange-500 font-bold text-xs uppercase tracking-[0.3em]">
-                // {t('about.details.label')}
+                {t('about.details.label')}
               </span>
               <div className="h-px w-12 bg-neutral-800 hidden md:block"></div>
             </div>

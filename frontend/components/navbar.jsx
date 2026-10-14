@@ -16,9 +16,11 @@ export default function ElegantNavbar() {
 
   const navLinks = [
     { id: "01", name: t('nav.work'), href: "#project" },
-    { id: "02", name: t('nav.about'), href: "#about" },
-    { id: "03", name: t('nav.journey'), href: "#roadmap" },
-    { id: "04", name: t('nav.home'), href: "#" },
+    { id: "02", name: t('nav.mobile'), href: "#mobile-app" },
+    { id: "03", name: t('nav.about'), href: "#about" },
+    { id: "04", name: t('nav.journey'), href: "#roadmap" },
+    { id: "05", name: t('nav.contact'), href: "#contact" },
+    { id: "06", name: t('nav.home'), href: "#" },
   ];
 
   return (
@@ -31,19 +33,19 @@ export default function ElegantNavbar() {
           scrolled ? "py-2 md:py-3 bg-black/90 backdrop-blur-lg " : "py-1 md:py-2 bg-transparent"
         }`}
       >
-        <div className="w-full mx-auto flex justify-between items-center px-6" style={{padding:"0px 30px"}}>
+        <div className="w-full mx-auto flex justify-between items-center px-6 md:px-8">
 
           {/* Brand - Professional Logo Style */}
           <a href="#" className="group flex items-center gap-3 !no-underline" style={{ textDecoration: 'none' }}>
             {/* Logo Mark */}
             <div className="relative w-10 h-10 flex items-center justify-center border border-white/20 rounded-sm group-hover:border-orange-500/50 transition-colors duration-500">
-              <span className="text-sm font-bold tracking-tight text-white">BE</span>
+              <span className="text-sm font-bold tracking-tight text-white">{t('brand.initial')}</span>
               <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm" />
             </div>
             {/* Logo Wordmark */}
             <div className="flex flex-col leading-none">
-              <span className="text-lg font-semibold tracking-[0.15em] text-white uppercase !no-underline" style={{ textDecoration: 'none' }}>Brad</span>
-              <span className="text-[10px] font-light tracking-[0.4em] text-neutral-500 uppercase !no-underline" style={{ textDecoration: 'none' }}>Emery</span>
+              <span className="text-lg font-semibold tracking-[0.15em] text-white uppercase !no-underline" style={{ textDecoration: 'none' }}>{t('brand.firstName')}</span>
+              <span className="text-[10px] font-light tracking-[0.4em] text-neutral-500 uppercase !no-underline" style={{ textDecoration: 'none' }}>{t('brand.lastName')}</span>
             </div>
           </a>
 
@@ -52,7 +54,7 @@ export default function ElegantNavbar() {
             {navLinks.map((link) => (
               <li key={link.id} className="group relative">
                 <a href={link.href} className="flex items-start gap-2" style={{ textDecoration: 'none' }}>
-                  <span className="text-[9px] font-mono text-neutral-600 group-hover:text-red transition-colors">
+                  <span className="text-[9px] font-mono text-neutral-600 group-hover:text-orange-500 transition-colors">
                     {link.id}
                   </span>
                   <span className="text-xs uppercase tracking-[0.4em] text-neutral-400 group-hover:text-white group-hover:italic transition-all duration-500">
@@ -96,7 +98,7 @@ export default function ElegantNavbar() {
               <div className="flex items-center gap-4">
                 <LanguageSwitcher />
                 <button onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-widest text-white">
-                  Close //
+                  {t('nav.close')}
                 </button>
               </div>
             </div>
@@ -118,7 +120,7 @@ export default function ElegantNavbar() {
             </nav>
 
             <div className="text-neutral-700 text-[10px] uppercase tracking-[0.4em]">
-              © 2026 Brad Emery — Douala
+              {t('nav.copyright', { year: new Date().getFullYear() })}
             </div>
           </motion.div>
         )}

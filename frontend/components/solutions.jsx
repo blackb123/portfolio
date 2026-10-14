@@ -18,11 +18,10 @@ export default function Solutions() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="bg-[#0a0a0a] border-t border-white/5"
-      style={{ padding: '30px 0' }}
+      className="bg-black border-t border-white/10"
     >
-      <div className="px-8 py-32 md:py-48 min-h-[80vh] flex items-center">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 w-full">
+      <div className="px-6 md:px-8 py-32 md:py-48 min-h-[80vh] flex items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
           {/* Sidebar Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -33,7 +32,7 @@ export default function Solutions() {
           >
             <div className="sticky top-10 flex flex-col gap-2">
               <span className="text-orange-500 font-bold text-xs uppercase tracking-[0.3em]">
-                // {t('solutions.label')}
+                {t('solutions.label')}
               </span>
               <div className="h-px w-12 bg-neutral-800 hidden md:block"></div>
             </div>
@@ -68,7 +67,7 @@ export default function Solutions() {
                 </motion.div>
 
                 {/* Solutions Grid */}
-                <div className="space-y-8">
+                <div className="space-y-6 md:space-y-10">
                   {solutions.map((solution, idx) => (
                     <motion.div
                       key={idx}
@@ -76,8 +75,8 @@ export default function Solutions() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.4 + idx * 0.1 }}
                       viewport={{ once: true }}
-                      className="group rounded-xl shadow-md p-6 md:p-8 hover:shadow-lg active:bg-red-500/10 transition-all duration-300 cursor-pointer"
-                      style={{ padding: '20px', marginBottom: '20px' }}
+                      whileHover={{ y: -4 }}
+                      className="group rounded-xl border border-white/5 bg-white/[0.02] p-6 md:p-8 hover:border-orange-500/30 hover:bg-white/[0.04] transition-all duration-300 cursor-pointer"
                     >
                       <div className="flex items-start gap-4 pb-4 border-b border-neutral-800/50">
                         <span className="text-orange-500 text-sm font-mono opacity-60 group-hover:opacity-100 transition-opacity">

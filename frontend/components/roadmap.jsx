@@ -10,6 +10,7 @@ function TreeNode({ data, index }) {
     <motion.div
       initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
       whileInView={{ opacity: 1, x: 0 }}
+      whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
       viewport={{ once: true, margin: "-50px" }}
       className={`relative flex items-center gap-8 ${isLeft ? "flex-row" : "flex-row-reverse"} w-full`}
@@ -73,14 +74,13 @@ export default function Roadmap() {
     <section
       ref={containerRef}
       id="roadmap"
-      className="relative bg-[#0a0a0a] border-t border-white/5 overflow-hidden"
-      style={{ padding: '30px 0' }}
+      className="relative bg-black border-t border-white/10 overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-neutral-800 to-transparent max-w-full" />
 
       {/* Header */}
-      <div className="px-8 py-32 md:py-48">
+      <div className="px-6 md:px-8 py-32 md:py-48">
         <div className="max-w-7xl mx-auto text-center">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -99,7 +99,7 @@ export default function Roadmap() {
             viewport={{ once: true }}
             className="text-5xl md:text-7xl font-medium tracking-tighter text-white mt-6"
           >
-            {t('roadmap.title')}{" "}<span className="text-orange-600 italic">{t('roadmap.titleHighlight')}</span>{" "}{t('roadmap.subtitle')}
+            {t('roadmap.title')}{" "}<span className="text-orange-600 italic">{t('roadmap.titleHighlight')}</span>{" "}{t('roadmap.titleEnd')}
           </motion.h2>
           
           <motion.div
@@ -113,7 +113,7 @@ export default function Roadmap() {
       </div>
 
       {/* Tree Timeline - Education */}
-      <div className="relative px-8 pb-32">
+      <div className="relative px-6 md:px-8 pb-20 md:pb-24">
         <div className="max-w-4xl mx-auto">
           {/* Section Label */}
           <motion.div
@@ -148,7 +148,7 @@ export default function Roadmap() {
       </div>
 
       {/* Experience Branch */}
-      <div className="relative px-8 py-32 border-t border-white/5">
+      <div className="relative px-6 md:px-8 pt-20 pb-16 md:pt-24 md:pb-20 border-t border-white/10">
         <div className="max-w-4xl mx-auto">
           {/* Section Label */}
           <motion.div
@@ -180,7 +180,7 @@ export default function Roadmap() {
       </div>
 
       {/* Bottom decoration */}
-      <div className="px-8 py-24 border-t border-white/5">
+      <div className="px-6 md:px-8 py-16 border-t border-white/10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

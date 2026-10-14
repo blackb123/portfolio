@@ -14,20 +14,7 @@ export default function Hero() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const { t } = useTranslation();
 
-  const sectorItems = [
-    "Freight & Logistics",
-    "Clinics & Health",
-    "Transport & Mobility",
-    "Restaurants & Food",
-    "Retail & Commerce",
-    "Hotels & Hospitality",
-    "Manufacturing",
-    "Construction",
-    "Field Services",
-    "Education",
-    "Real Estate",
-    "B2B Operations"
-  ];
+  const sectorItems = t('hero.sectors', { returnObjects: true }) || [];
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 767px)");
@@ -198,9 +185,9 @@ export default function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="bg-[#0a0a0a] px-8 py-32 md:py-64 min-h-[80vh] flex items-center text-white border-t border-white/5 mt-16 md:mt-24"
+        className="bg-[#0a0a0a] px-6 md:px-8 py-32 md:py-64 min-h-[80vh] flex items-center text-white border-t border-white/10"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
           {/* Sidebar Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -211,7 +198,7 @@ export default function Hero() {
           >
             <div className="sticky top-10 flex flex-col gap-2">
               <span className="text-orange-500 font-bold text-xs uppercase tracking-[0.3em]">
-                // Intro
+                {t('hero.introLabel')}
               </span>
               <div className="h-px w-12 bg-neutral-800 hidden md:block"></div>
             </div>
@@ -226,16 +213,13 @@ export default function Hero() {
               viewport={{ once: true }}
               className="text-5xl md:text-8xl font-medium leading-[1] tracking-tighter"
             >
-              I’m a versatile{" "}
-              <span className="text-orange-600 italic">Full stack developer</span>{" "}
-              who partners with founders to turn ideas into{" "}
+              {t('hero.introHeadline')}{" "}
+              <span className="text-orange-600 italic">{t('hero.introHeadlineHighlight')}</span>{" "}
+              {t('hero.introHeadlineEnd')}{" "}
               <span className="text-white underline decoration-neutral-800 underline-offset-8">
-                real products
+                {t('hero.introHeadlineEndHighlight')}
               </span>
-              . I focus on{" "}
-              <span className="text-neutral-500">
-                clear interfaces, sharp decisions, and fast execution.
-              </span>
+              {t('hero.introHeadlineTail')}
             </motion.h3>
 
             {/* Footer Content of the Intro */}
@@ -248,33 +232,31 @@ export default function Hero() {
             >
               <div className="max-w-xl space-y-6">
                 <p className="text-neutral-400 text-lg md:text-xl leading-relaxed font-light">
-                  Bringing your vision to life quickly and efficiently—whether
-                  it’s branding, apps, or websites—we got it covered,
-                  delivering smooth and effective solutions from start to
-                  finish.
+                  {t('hero.introParagraph')}
                 </p>
                 <div className="flex gap-4 text-xs font-mono text-neutral-600">
-                  <span>Branding</span> <span>/</span>
-                  <span>Websites</span> <span>/</span>
-                  <span>Apps</span>
+                  {t('hero.introTags', { returnObjects: true }).map((tag, idx) => (
+                    <span key={idx}>{tag}{idx < (t('hero.introTags', { returnObjects: true }).length - 1) ? " /" : ""}</span>
+                  ))}
                 </div>
               </div>
 
               {/* Cinematic "See my Work" Button */}
-              <motion.button
+              <motion.a
+                href="#work"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="group relative px-12 py-6 border border-neutral-800 rounded-full text-xs uppercase tracking-widest overflow-hidden transition-all"
-                style={{padding:"10px 10px"}}
+                whileTap={{ scale: 0.97 }}
+                className="group relative px-6 py-3 border border-neutral-800 rounded-full text-xs uppercase tracking-widest overflow-hidden transition-all duration-300 hover:border-orange-500/50"
               >
-                <span className="relative z-10 group-hover:text-black transition-colors duration-500" >
-                  See my Work
+                <span className="relative z-10 group-hover:text-black transition-colors duration-500">
+                  {t('hero.seeWork')}
                 </span>
-                <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-              </motion.button>
+                <div className="absolute inset-0 bg-orange-500 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+              </motion.a>
             </motion.div>
           </div>
         </div>
@@ -286,9 +268,9 @@ export default function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="bg-[#0a0a0a] px-8 py-32 md:py-48 border-t border-white/5 mt-24 md:mt-32"
+        className="bg-[#0a0a0a] px-6 md:px-8 py-32 md:py-48 border-t border-white/10"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 w-full">
           {/* Sidebar Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -299,7 +281,7 @@ export default function Hero() {
           >
             <div className="sticky top-10 flex flex-col gap-2">
               <span className="text-orange-500 font-bold text-xs uppercase tracking-[0.3em]">
-                // Work
+                {t('hero.workLabel')}
               </span>
               <div className="h-px w-12 bg-neutral-800 hidden md:block"></div>
             </div>
@@ -328,12 +310,10 @@ export default function Hero() {
                   viewport={{ once: true }}
                 >
                   <h3 className="text-5xl md:text-7xl font-medium leading-[1.1] tracking-tighter text-white">
-                    Branding & Marketing
+                    {t('hero.workTitle')}
                   </h3>
                   <p className="mt-6 text-lg md:text-2xl text-neutral-400 font-light leading-relaxed max-w-2xl">
-                    Branding that builds trust and drives loyalty through clear
-                    visuals and messaging, into an unforgettable online
-                    experience.
+                    {t('hero.workDescription')}
                   </p>
                 </motion.div>
 
@@ -345,14 +325,7 @@ export default function Hero() {
                   viewport={{ once: true }}
                   className="space-y-1 text-base md:text-lg"
                 >
-                  {[
-                    { name: "Brand Strategy and Messaging", icon: "◎" },
-                    { name: "Logo Design", icon: "◉" },
-                    { name: "Visual Identity", icon: "◈" },
-                    { name: "Brand Guidelines & Frameworks", icon: "◆" },
-                    { name: "Marketing materials", icon: "◇" },
-                    { name: "Motion Design", icon: "⟲" }
-                  ].map((item, idx) => (
+                  {(t('hero.workItems', { returnObjects: true }) || []).map((item, idx) => (
                     <motion.li
                       key={idx}
                       initial={{ opacity: 0, x: -10 }}
@@ -362,10 +335,10 @@ export default function Hero() {
                       className="group flex items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-default"
                     >
                       <span className="text-orange-500 text-sm font-mono opacity-60 group-hover:opacity-100 transition-opacity">
-                        {item.icon}
+                        {["◎", "◉", "◈", "◆", "◇", "⟲"][idx] || "◎"}
                       </span>
                       <span className="text-white/90 group-hover:text-white font-medium tracking-tight group-hover:translate-x-1 transition-transform">
-                        {item.name}
+                        {item}
                       </span>
                       <span className="ml-auto text-[10px] font-mono text-neutral-600 group-hover:text-orange-500/60 transition-colors">
                         0{idx + 1}
